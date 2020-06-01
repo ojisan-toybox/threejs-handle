@@ -20,13 +20,13 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
-        test: /\.(png)$/,
+        test: /\.(amf)$/,
         use: ["file-loader"],
       },
     ],
   },
   resolve: {
-    extensions: [".js", ".ts"],
+    extensions: [".js", ".ts", "amf"],
   },
   devServer: {
     contentBase: path.join(__dirname, "dist"),

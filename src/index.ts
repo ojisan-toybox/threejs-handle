@@ -2,6 +2,7 @@ import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { AMFLoader } from "three/examples/jsm/loaders/AMFLoader";
 import { Scene, WebGLRenderer, PerspectiveCamera } from "three";
+import model from "./assets/rook.amf";
 
 let camera: PerspectiveCamera;
 let scene: Scene;
@@ -41,7 +42,7 @@ function init() {
   document.body.appendChild(renderer.domElement);
 
   var loader = new AMFLoader();
-  loader.load("./assets/rook.amf", function (amfobject) {
+  loader.load(model, function (amfobject) {
     scene.add(amfobject);
     render();
   });
